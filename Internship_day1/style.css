@@ -1,0 +1,234 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.full-page
+{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(white,rgba(0,0,0,0.9));
+    position: absolute;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+.logo a
+{
+    text-decoration: none;
+    color: rgb(133,128,255);
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+    padding-top: 6px;
+}
+nav ul 
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right: 70px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(133,128,255);
+    font-family: sans-serif;
+}
+nav ul li button
+{
+    font-size: 20px;
+    color: rgb(133,128,255);
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+.sub-page
+{
+    width: 1330px;
+    height: 670px;
+    position: absolute;
+    background: url(abc.jpg);
+    background-size: cover;
+    background-position: center;
+    left: 95px;
+    top: 70px;
+    image-rendering: auto;
+    align-content: center;
+}
+.overlay
+{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5),white);
+    opacity: 0;
+    transition: 1s;
+}
+.sub-page:hover .overlay
+{
+    opacity: 1;
+}
+.text
+{
+    text-align: center;
+    color: white;
+    padding-right: 350px;
+    padding-left: 350px;
+    font-size: 20px;
+    font-family: 'Chilanka', cursive;
+    transform: translateY(-220%);
+    opacity: 0;
+    transition: 1s;
+}
+.sub-page:hover .text
+{
+    opacity: 1;
+}
+#login-form
+{
+    display: none;
+}
+.form-box
+{
+    width:30%;
+    height:60%;
+    position: relative;
+    top: 90px;
+    left: 210px;
+    background: rgba(0,0,0,0.6);
+}
+.close 
+{
+    position: relative;
+    left: 270px;
+    bottom: 0;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,.close:focus 
+{
+    color: red;
+    cursor: pointer;
+}
+.main-heading
+{
+    color: rgb(133,128,255);
+    padding-bottom: 20px;
+}
+.form
+{
+    position: relative;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    bottom: 20px;
+}
+.form input, .form1 input
+{
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 15px;
+    font-size: 14px;
+}
+.form button, .form1 button
+{
+    font-family: sans-serif;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    background: rgb(133,128,255)
+}
+.form .asking
+{
+    font-size: 12px;
+    margin: 15px 0 0;
+    color: white;
+}
+.form .asking a
+{
+    color: rgb(133,128,255);
+    text-decoration: none;
+}
+#register-form
+{
+    display: none;
+}
+.form-box1
+{
+    width: 32%;
+    height: 88%;
+    position: absolute;
+    left:860px;
+    bottom: 15px;
+    background: rgba(0,0,0,0.6);
+    
+}
+.main-heading
+{
+    color: rgb(133,128,255);
+    padding-bottom:10px;
+    margin-bottom:20px;
+    text-align: center;
+    position: relative;
+    bottom:30px;
+    
+   
+}
+.form1
+{
+    position: relative;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    bottom: 0px;
+   
+    
+}
+.register-form{
+position: relative;
+bottom: 45px;
+
+color: aqua;
+}
+
+.controls
+{
+    display: flex;
+}
+.radio
+{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+    
+}
+
+
