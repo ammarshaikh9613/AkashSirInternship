@@ -1,0 +1,59 @@
+
+ <html>
+<head>
+<title>Student Registration Form</title>
+</head>
+<body>
+<h3>STUDENT REGISTRATION FORM</h3>
+<form action="display.php" method="POST">
+<table align="center" cellpadding = "10">
+<!-- First Name -->
+<tr>
+<td>FIRST NAME</td>
+<td><input type="text" name="name" maxlength="30" required/>
+</td>
+</tr>
+<tr>
+<td>LAST NAME</td>
+<td><input type="text" name="lname" maxlength="30" required/>
+</td>
+</tr>
+<tr>
+<td>DATE OF BIRTH</td>
+<td><input type="date" name="dob" maxlength="10" required/></td>
+</tr>
+<tr>
+<td>EMAIL ID</td>
+<td><input type="email" name="email" maxlength="100" style="width:250px" 
+required placeholder="Enter a valid email address"></td>
+</tr>
+<tr>
+<td>MOBILE NUMBER</td>
+<td><input type="tel" name="mobile" maxlength="10" />
+</td>
+</tr>
+<tr>
+<td>GENDER</td>
+<td><input type="radio" name="gender" value="Male" checked/>Male
+<input type="radio" name="gender" value="Female" />Female
+</td>
+</tr>
+<tr>
+<td>ADDRESS <br /><br /><br /></td>
+<td><textarea name="address" rows="4" cols="30"></textarea></td>
+</tr>
+<!-- City -->
+<tr>
+<td>CITY</td>
+<td><select name="city" id="City">
+<option value="0" selected>-- Select --</option>
+<option value="Ahmedabad">Ahmedabad</option>
+<option value="Mehsana">Mehsana</option>
+</select>
+</td>
+</tr>
+</table>
+<br><center><input type="submit" value="submit"></center>
+</form>
+</body>
+</html>

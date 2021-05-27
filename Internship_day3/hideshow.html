@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <style>
+                #green
+                {
+                    width: 30%;
+                    height: 30%;
+                    background-color: green;
+                    float: left;
+                }
+                #blue
+                {
+                    width: 30%;
+                    height: 30%;
+                    background-color: blue;
+                    float: left;
+                }
+                #red
+                {
+                    width: 30%;
+                    height: 30%;
+                    background-color: red;
+                    float: left;
+                }
+                
+            </style>
+    </head>
+    <body>
+        <input type="button" value="GREEN" id="btn1" style="position: absolute;">
+        
+       
+        <div id="green"></div>
+
+        <input type="button" value="blue" id="btn2" style="position: absolute; left: 43%;">
+       
+        <div id="blue"></div>
+
+        <input type="button" value="red" id="btn3" style="position: absolute; left: 74%;">
+       
+        <div id="red"></div>
+        
+        
+         
+    </body>
+
+
+
+    <script type="text/javascript">
+            document.getElementById("btn1").addEventListener("click",function()
+                {
+                    var box1=document.getElementById("green");
+                    var box2=document.getElementById('blue');
+                    var box3=document.getElementById('red');
+                    
+                    if(box1.style.display=="none")
+                    {
+                        box1.style.display="block";
+                        box2.style.display="none";
+                        box3.style.display="none";
+
+
+                    }
+                    else
+                    {
+                        box1.style.display="none";
+
+                    }
+
+                    
+                }
+            )
+
+            document.getElementById("btn2").addEventListener("click",function()
+                {
+                    var box2=document.getElementById("blue");
+                    
+                    var box1=document.getElementById("green");
+                
+                    var box3=document.getElementById('red');
+                    if(box2.style.display=="none")
+                    {
+                        box2.style.display="block";
+                        
+                        box1.style.display="none";
+                        box3.style.display="none";
+
+                    }
+                    else
+                    {
+                        box2.style.display="none";
+
+                    }
+                }
+            )
+            document.getElementById("btn3").addEventListener("click",function()
+                {
+                    var box3=document.getElementById("red");
+
+                    var box1=document.getElementById("green");
+                    var box2=document.getElementById('blue');
+
+                    if(box3.style.display=="none")
+                    {
+                        box3.style.display="block";
+
+                        box1.style.display="none";
+                        box2.style.display="none";
+                    }
+                    else
+                    {
+                        box3.style.display="none";
+
+                    }
+                }
+            )
+            
+    </script>
+
+
+</html>
