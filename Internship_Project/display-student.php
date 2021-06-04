@@ -12,9 +12,16 @@
         <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
         <!-- endinject -->
         <!-- inject:css -->
+        
+        
+        
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+      <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+
         <link rel="stylesheet" href="css/style.css">
         <!-- endinject -->
         <link rel="shortcut icon" href="images/favicon.png" />
+        
     </head>
 
     <body>
@@ -49,9 +56,10 @@ $q=mysqli_query($connection,"
 
 ") or die(mysqli_error($connection));
                                                 echo "<center>";
-                                                    echo "<table class='table table-bordered'>";
-                                                        echo "<tr>";
-                                                            echo "<th>Student Id</th>";
+                                                    echo "<table id='myTable' border='1' >";
+                                                    echo "<thead>";    
+                                                    echo "<tr>";
+                                                            echo "<th>#</th>";
                                                             echo "<th>Student Name</th>";
                                                             echo "<th>Student Gender</th>";
                                                             echo "<th>Student DOB</th>";
@@ -65,7 +73,8 @@ $q=mysqli_query($connection,"
 
 
                                                             echo "</tr>";
-
+                                                    echo "</thead>";
+                                                    
                                                         $i=0;
                                                         while($row=mysqli_fetch_array($q))
                                                         {
@@ -81,7 +90,8 @@ $q=mysqli_query($connection,"
                                                             echo "<td>{$row['st_area']}</td>";
                                                             echo "<td>{$row['st_pincode']}</td>";
                                                             echo "<td>{$row['st_bloodgroup']}</td>";
-                                                            echo "<td><a href='delete-student.php?delid={$row['st_id']}'>Delete</a></td>";
+                                                            //echo "<td><a href='edit-student.php?id={$row['st_id']}'>Edit</a>|<a href='delete-student.php?delid={$row['st_id']}'>Delete</a></td>";
+                                                            echo "<td><a href='edit-student.php?id={$row['st_id']}'><img style='height:15px' src='images/edit.png'> Edit</a> | <a href='display-student.php?delid={$row['st_id']}'> <img style='width:15px' src='images/delete.png'> Delete </a></td>";
 
                                                             echo "</tr>";
 
@@ -119,6 +129,12 @@ $q=mysqli_query($connection,"
         <script src="js/hoverable-collapse.js"></script>
         <script src="js/template.js"></script>
         <!-- endinject -->
+        
+        <script>
+        $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+</script>
         <!-- End custom js for this page-->
     </body>
 
