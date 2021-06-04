@@ -2,17 +2,21 @@
  
 
 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 
 <?php 
 $connection=mysqli_connect("localhost","root","","student_db") or die(mysqli_error($connection));
         
+
+
 $q=mysqli_query($connection,"
     select * from student where is_delete=0
 
 ") or die(mysqli_error($connection));
 
 echo "<center>";
-echo "<table border='1'>";
+echo "<table id='myTable' border='1'>";
 echo "<tr>";
 echo "<th>Student Id</th>";
 echo "<th>Student Name</th>";
@@ -44,7 +48,7 @@ while($row=mysqli_fetch_array($q))
         echo "<td>{$row['st_area']}</td>";
         echo "<td>{$row['st_pincode']}</td>";
         echo "<td>{$row['st_bloodgroup']}</td>";
-        echo "<td><a href='del.php?delid={$row['st_id']}'>Delete</a></td>";
+        echo "<td><a href='edit.php?id={$row['st_id']}'>Edit</a> | <a href='del.php?delid={$row['st_id']}'>Delete</a></td>";
         
     echo "</tr>";
     
@@ -56,3 +60,10 @@ echo "</center>";
 echo "<a  href='studentsignup.php'>Add record</a>";
 
  ?>
+
+
+ <script>
+        $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+ </script>
